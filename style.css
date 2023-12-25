@@ -1,4 +1,6 @@
+/* NOTE: Custom variables */
 :root {
+  --font-family: "Noto Sans TC", sans-serif;
   --h1-font-size: 4.5rem;
   --h2-font-size: 3.75rem;
   --h3-font-size: 3rem;
@@ -28,7 +30,246 @@
   padding: 0;
 }
 
+body {
+  font-family: var(--font-family);
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
 .container {
   width: 80%;
   margin: auto;
+}
+
+.section__title {
+  font-size: var(--h3-font-size);
+}
+
+.section__title > span {
+  color: var(--o1-color);
+}
+
+.track__container,
+.course__container {
+  padding: 10vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/*
+.hero::before,
+.track::before {
+  content: "";
+  position: absolute;
+  z-index: -998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+*/
+
+/* NOTE: Buttons */
+.join__button {
+  width: 300px;
+  height: 100px;
+  font-size: var(--h4-font-size);
+  font-weight: bold;
+  color: var(--o1-color);
+  background-color: var(--b1-color);
+  border: 3px solid var(--o1-color);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 4rem;
+}
+
+.join__button:hover {
+  background-color: var(--o1-color);
+  color: var(--b1-color);
+}
+
+.track__button,
+.course__button {
+  width: 150px;
+  height: 36px;
+  border-radius: 10px;
+  font-size: var(--h6-font-size);
+  font-weight: bold;
+  background: transparent;
+  align-self: end;
+  cursor: pointer;
+}
+
+.track__button {
+  color: var(--white-color);
+  border: 3px solid var(--white-color);
+}
+
+.track__button:hover {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.course__button {
+  color: var(--b1-color);
+  border: 3px solid var(--b1-color);
+}
+
+.course__button:hover {
+  background-color: var(--b1-color);
+  color: var(--white-color);
+  border: 3px solid var(--b1-color);
+}
+
+/* TODO: Remove this */
+.nav {
+  background-color: var(--b1-color);
+  height: 100px;
+  width: 100%;
+  /* position: fixed; */
+  position: absolute;
+}
+
+.hero {
+  background-image: url(./img/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  /* position: relative; */
+  /* z-index: -999; */
+}
+
+.hero__container {
+  padding-top: 45vh;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.hero__title,
+.hero__name {
+  font-size: var(--h1-font-size);
+  color: var(--white-color);
+  text-align: center;
+}
+
+.hero__title-dynamic {
+  color: var(--o1-color);
+}
+
+/* TODO: Remove */
+.hero__description {
+  font-size: var(--p-font-size);
+  color: var(--g4-color);
+  text-align: center;
+}
+
+.hero__count {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem 6rem;
+}
+
+.hero__count-num,
+.hero__count-item {
+  font-size: var(--h6-font-size);
+  color: var(--g4-color);
+  text-align: center;
+}
+
+.join {
+  background-color: var(--b1-color);
+}
+
+.join__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.join__info-box {
+  width: 50%;
+  display: grid;
+  row-gap: 2rem;
+}
+
+.join__subtitle {
+  color: var(--o2-color);
+}
+
+.join__description {
+  font-size: var(--h5-font-size);
+  color: var(--g4-color);
+}
+
+.join__outer-shape {
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  background-color: var(--o1-color);
+  width: 40%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.join__inner-shape {
+  background-color: var(--b1-color);
+  width: 96%;
+  height: 95%;
+}
+
+.track {
+  background-image: url(./img/track-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  /* position: relative; */
+  /* z-index: -999; */
+}
+
+.track__title {
+  color: var(--white-color);
+}
+
+.track__info-box {
+  width: 100%;
+  height: 60vh;
+  border: 3px solid var(--white-color);
+}
+
+.course {
+  background-color: var(--g4-color);
+}
+
+.course__title {
+  color: var(--b1-color);
+}
+
+.course__info-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.course__card {
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: var(--white-color);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.course__card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
 }
