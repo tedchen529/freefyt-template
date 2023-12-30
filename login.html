@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreeFYT | Login</title>
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <div class="nav"></div>
+    <div class="container">
+      <div class="login__container">
+        <div class="login__area">
+          <div class="login__panel sign-in">
+            <h4>登入</h4>
+            <button class="login__login-button">登入</button>
+            <button class="login__google-button">使用 Google 帳戶登入</button>
+          </div>
+          <div class="login__panel sign-up">
+            <h4>註冊</h4>
+          </div>
+          <div class="login__overlay">
+            <div class="login__overlay-contents">
+              <div class="login__overlay-panel overlay-left">
+                <h4>已經是 FreeFYT 會員？</h4>
+                <p>立即登入，迎接健康新挑戰！</p>
+                <button class="login__overlay-button">登入</button>
+              </div>
+              <div class="login__overlay-panel overlay-right">
+                <h4>還沒成為會員？</h4>
+                <p>立即加入 FreeFYT，開啟您的健身之旅！</p>
+                <button class="login__overlay-button">註冊</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button id="testing">testing</button>
+
+    <script>
+      const testBtn = document.querySelector('#testing')
+      const loginArea = document.querySelector('.login__area')
+
+      testBtn.addEventListener('click', () => {
+        loginArea.classList.toggle('right-active')
+      })
+    </script>
+  </body>
+</html>

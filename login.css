@@ -1,0 +1,230 @@
+:root {
+  --font-family: 'Noto Sans TC', sans-serif;
+  --h1-font-size: 4.5rem;
+  --h2-font-size: 3.75rem;
+  --h3-font-size: 3rem;
+  --h4-font-size: 2.25rem;
+  --h5-font-size: 1.5rem;
+  --h6-font-size: 1.25rem;
+  --p-font-size: 1rem;
+  --p-sm-font-size: 0.75rem;
+  --b1-color: #1c3b5e;
+  --b2-color: #4674a9;
+  --b3-color: #95c4f0;
+  --b4-color: #dfeeff;
+  --o1-color: #ff804a;
+  --o2-color: #f8a784;
+  --o3-color: #ffddce;
+  --g1-color: #313131;
+  --g2-color: #888888;
+  --g3-color: #c6c6c6;
+  --g4-color: #eeeceb;
+  --black-color: #2a2929;
+  --white-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--b1-color);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+p {
+  font-size: var(--p-font-size);
+}
+
+/* TODO: Remove this */
+.nav {
+  background-color: var(--b1-color);
+  height: 100px;
+  width: 100%;
+  /* position: absolute; */
+  border-bottom: 1px solid black;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.login__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+
+.login__area {
+  width: 50%;
+  height: 500px;
+  /* TODO: RWD */
+  background-color: var(--b1-color);
+  border-radius: 10px;
+  border: 5px solid var(--o1-color);
+  box-sizing: content-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.login__panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* NOTE: Two forms stacked together */
+  height: 100%;
+  width: 50%;
+  transition: all 0.6s ease-in-out;
+}
+
+.login__panel > h4 {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--white-color);
+}
+
+.sign-in {
+  z-index: 2;
+  background-color: var(--b1-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.sign-up {
+  background-color: var(--b1-color);
+  opacity: 0;
+  z-index: 1;
+}
+
+.login__area.right-active .sign-in {
+  transform: translateX(100%);
+}
+/* TODO: Keyframes for smoother transition? Tweak translateX value? Parallel with sign-up panel */
+
+.login__area.right-active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 3;
+}
+
+.login__overlay {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: calc(50% + 5px);
+  height: calc(100% + 10px);
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 999;
+}
+
+.login__overlay-panel > h4,
+.login__overlay-panel > p {
+  text-align: center;
+}
+
+.login__area.right-active .login__overlay {
+  transform: translateX(-100%);
+}
+
+.login__overlay-contents {
+  background-color: var(--o1-color);
+  color: var(--black-color);
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.login__area.right-active .login__overlay-contents {
+  transform: translateX(50%);
+}
+
+.login__overlay-panel {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transition: transform 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* TODO: Decide to keep or not */
+.overlay-left {
+  transform: translateX(-20%);
+  padding-left: 5px;
+}
+
+.login__area.right-active .overlay-left {
+  transform: translateX(0);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.login__area.right-active .overlay-right {
+  transform: translateX(20%);
+}
+
+.login__overlay-button,
+.login__login-button,
+.login__google-button {
+  width: 80%;
+  height: 40px;
+  font-size: var(--p-font-size);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.login__login-button {
+  background-color: var(--o1-color);
+  color: var(--b1-color);
+}
+
+.login__login-button:hover {
+  background-color: var(--o2-color);
+  color: var(--b2-color);
+}
+
+.login__google-button {
+  border: 3px solid var(--o1-color);
+  background-color: var(--b1-color);
+  color: var(--o1-color);
+}
+
+.login__google-button:hover {
+  background-color: var(--o1-color);
+  color: var(--b1-color);
+}
+
+.login__overlay-button {
+  background-color: var(--b1-color);
+  color: var(--o1-color);
+}
+
+.login__overlay-button:hover {
+  background-color: var(--b2-color);
+  color: var(--o2-color);
+}
