@@ -1,0 +1,147 @@
+:root {
+    --font-family: 'Noto Sans TC', sans-serif;
+    --h1-font-size: 4.5rem;
+    --h2-font-size: 3.75rem;
+    --h3-font-size: 3rem;
+    --h4-font-size: 2.25rem;
+    --h5-font-size: 1.5rem;
+    --h6-font-size: 1.25rem;
+    --p-font-size: 1rem;
+    --p-sm-font-size: 0.75rem;
+    --b1-color: #1c3b5e;
+    --b2-color: #4674a9;
+    --b3-color: #95c4f0;
+    --b4-color: #dfeeff;
+    --o1-color: #ff804a;
+    --o2-color: #f8a784;
+    --o3-color: #ffddce;
+    --g1-color: #313131;
+    --g2-color: #888888;
+    --g3-color: #c6c6c6;
+    --g4-color: #eeeceb;
+    --black-color: #2a2929;
+    --white-color: #ffffff;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body { 
+    font-family: var(--font-family);
+  }
+  
+  section {
+    width: 100%;
+    margin: 3rem 0;
+  }
+
+  h3 {
+    font-size: var(--h3-font-size)
+  }
+
+  h5 {
+    font-size: var(--h5-font-size)
+  }
+
+  p {
+    font-size: var(--p-font-size);
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    max-width: 1440px;
+  }
+  
+  .section__title {
+    font-size: var(--h3-font-size);
+  }
+  
+  .section__title > span {
+    color: var(--o1-color);
+  }
+
+  /* TODO: Remove this */
+.nav {
+    background-color: var(--b1-color);
+    height: 100px;
+    width: 100%;
+    /* position: fixed; */
+    position: absolute;
+  }
+
+.heading {
+  padding-top: 100px;
+}
+
+.heading__title {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--b1-color);
+  }
+
+.heading__contents {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.heading__profile-img {
+  height: 16rem;
+  width: 16rem;
+  background-color: var(--g3-color);
+  border-radius: 50%;
+}
+
+.heading__info-box {
+  flex: 1;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.menu__container {
+  width: 60%;
+  border: 3px solid var(--b1-color);
+  border-radius: 5px;
+}
+
+.menu__container > p {
+  font-weight: bold;
+  margin: 0.5rem ;
+  text-align: center;
+}
+
+.menu__all-shortcuts {
+  display: grid;
+}
+
+.menu__row {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5rem 0;
+}
+
+.menu__group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.menu__icon-text-pair {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__icon {
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--g3-color);
+}
+
+.menu__text {
+  font-weight: bold;
+}
