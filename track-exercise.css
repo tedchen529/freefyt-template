@@ -1,0 +1,167 @@
+:root {
+  --font-family: 'Noto Sans TC', sans-serif;
+  --h1-font-size: 4.5rem;
+  --h2-font-size: 3.75rem;
+  --h3-font-size: 3rem;
+  --h4-font-size: 2.25rem;
+  --h5-font-size: 1.5rem;
+  --h6-font-size: 1.25rem;
+  --p-font-size: 1rem;
+  --p-sm-font-size: 0.75rem;
+  --b1-color: #1c3b5e;
+  --b2-color: #4674a9;
+  --b3-color: #95c4f0;
+  --b4-color: #dfeeff;
+  --o1-color: #ff804a;
+  --o2-color: #f8a784;
+  --o3-color: #ffddce;
+  --g1-color: #313131;
+  --g2-color: #888888;
+  --g3-color: #c6c6c6;
+  --g4-color: #eeeceb;
+  --black-color: #2a2929;
+  --white-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+section {
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+nav {
+  height: 100px;
+  width: 100%;
+  background-color: var(--b1-color);
+}
+/* TODO: Remove */
+
+.container {
+  width: 80%;
+  margin: auto;
+  max-width: 1440px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 7rem 0 3rem 0;
+}
+
+.section__title {
+  font-size: var(--h3-font-size);
+  color: var(--b1-color);
+  text-align: center;
+}
+
+.section__title > span {
+  color: var(--o1-color);
+}
+
+.breadcrumb {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: var(--g2-color);
+  font-weight: bold;
+}
+
+.plan__tab-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 1.5rem 0;
+}
+
+.plan__tab {
+  background-color: var(--white-color);
+  border: 3px solid var(--b1-color);
+  font-size: var(--p-font-size);
+  font-weight: bold;
+  color: var(--b1-color);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.plan__tab:hover {
+  background-color: var(--b1-color);
+  color: var(--white-color);
+}
+
+.plan__card-container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+.plan__card {
+  width: 16rem;
+  height: 18.75rem;
+  background-color: var(--white-color);
+  border-radius: 25px;
+  border: 5px solid var(--b1-color);
+  transition: all 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.5rem;
+}
+
+.plan__card:hover {
+  transform: scale(1.05);
+}
+
+.plan__card-title {
+  font-size: var(--h5-font-size);
+  color: var(--o1-color);
+}
+
+.plan__card-description {
+  font-size: var(--h6-font-size);
+  text-align: center;
+  color: var(--b1-color);
+}
+
+.plan__card-box {
+  font-size: var(--p-font-size);
+  width: 80%;
+}
+
+.plan__button-container {
+  display: flex;
+  flex-direction: column;
+  width: 17.25rem;
+  gap: 1rem;
+}
+
+.plan__button {
+  padding: 0.5rem 0;
+  font-size: var(--p-font-size);
+  font-weight: bold;
+  background-color: var(--white-color);
+  color: var(--o1-color);
+  border: 3px solid var(--o1-color);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.plan__button:hover {
+  background-color: var(--o1-color);
+  color: var(--b1-color);
+}
